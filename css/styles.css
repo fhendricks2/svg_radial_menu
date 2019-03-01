@@ -1,0 +1,65 @@
+:root {
+	--base-spacing-unit: 24px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/background.jpg);
+	background-size: cover;
+	background-position: center top;
+	padding: var(--base-spacing-unit);
+}
+
+.menu {
+	width: 100%;
+	height: auto;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	max-width: 792px;
+	max-height: 100%;
+	
+	@media screen and (min-width: 512px) {
+		max-width: 65vw;
+		max-height: 65vh;
+	}
+	
+}
+
+.main-menu {
+	cursor: pointer;
+}	
+circle {
+    transition: opacity 250ms;    
+}
+circle:hover {
+    opacity: 1;
+}
+circle.is-active > circle {
+    opacity: 1;
+}
+
+
+[class$="-button"] {
+	cursor: pointer;	
+}
+circle {
+    opacity: 0;
+    transition: opacity 250ms;
+}
+circle:hover {
+    opacity: 0.6;	
+}
+path {
+    pointer-events: none;
+}
